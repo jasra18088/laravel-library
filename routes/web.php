@@ -22,3 +22,10 @@ Route::post('/books', 'BooksController@store');
 Route::get('books/create', 'BooksController@create');
 Route::get('books/{book}', 'BooksController@show');
 Route::get('books/{book}/edit', 'BooksController@edit');
+Route::put('books/{book}', 'BooksController@update');
+
+Route::get('users', 'UserController@index');
+Route::get('users/{user}', 'UserController@show');
+
+Route::get('authors', 'AuthorsController@index');
+Route::get('authors/{author}', 'AuthorsController@show');

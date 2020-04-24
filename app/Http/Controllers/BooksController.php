@@ -30,6 +30,12 @@ class BooksController extends Controller
     }
 
     public function store() {
+
+        request()->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
         $book = new Books();
 
         $book->title = request('title');
@@ -45,5 +51,22 @@ class BooksController extends Controller
         $book = Books::find($id);
 
         return view('books.edit', ['book' => $book]);
+    }
+
+    public function update($id) {
+
+        request()->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $book = Books::find($id);
+
+        $book->title = request('title');
+        $book->description = request('description');
+        
+        $book->save();
+
+        return redirect('/books/' . $book->id);
     }
 }

@@ -4,8 +4,9 @@
 
     <h1>New Book</h1>
 
-    <form method="POST" action="/books">
+    <form method="POST" action="/books/{{ $book->id }}">
         @csrf
+        @method('PUT')
 
         <div class="form-group">
             <label  for="title">Title</label>

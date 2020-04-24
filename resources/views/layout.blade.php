@@ -21,7 +21,10 @@
                 <a href="/books">Books</a>
             </div>
             <div class="d-flex justify-content-end">
-                <a href="#">Users</a>
+                <a href="/users">Users</a>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="/authors">Authors</a>
             </div>
         </div>
         <div class="col-10">
